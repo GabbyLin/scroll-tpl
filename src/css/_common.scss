@@ -1,0 +1,13 @@
+/* clearBoth */
+@mixin clearBoth {
+    clear: both;
+    zoom: 1;
+    &:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+}

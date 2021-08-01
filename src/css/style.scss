@@ -1,0 +1,265 @@
+//breakpoints
+$bp-xxsmall: 20rem;
+$bp-xsmall: 24rem;
+$bp-small: 37.5rem;
+$bp-medium: 40rem;
+$bp-large: 50rem;
+$bp-xlarge: 64rem;
+$bp-max: 90rem;
+
+//colors
+$main-dark: #232323;
+$dark-bg: #1a1716;
+$white: #fafafa;
+$main-dblue: #03153a;
+$cnablue: #004e98;
+
+//line-height
+$line-height: 96px;
+$line-height-abs: -96px;
+$line-height2: 72px;
+$line-height2-abs: -72px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 400;
+  font-family: 微軟正黑體, "Microsoft JhengHei", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+
+  overflow: hidden;
+  height: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Noto Sans TC", serif;
+  margin-bottom: 1rem;
+
+  @media (max-width: $bp-large) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $bp-xsmall) {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Noto Sans TC", serif;
+  color: $main-dark;
+  margin-bottom: 1rem;
+
+  @media (max-width: $bp-small) {
+    font-size: 1.375rem;
+  }
+
+  @media (max-width: $bp-xxsmall) {
+    font-size: 1.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Noto Sans TC", serif;
+  color: $main-dark;
+
+  @media (max-width: $bp-xxsmall) {
+    font-size: 1.125rem;
+  }
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  //text-align: justify;
+
+  a {
+    color: #5e69ca;
+    font-weight: bold;
+  }
+
+  @media (max-width: $bp-xsmall) {
+    font-size: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+}
+
+img {
+  max-height: 100%;
+  width: auto;
+  // max-width: 100%;
+  // height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.875rem;
+}
+
+.paddingbox {
+  padding: 0 5rem 2.5rem 5rem;
+
+  @media (max-width: $bp-large) {
+    padding: 0 2rem 2.5rem 2rem;
+  }
+
+  @media (max-width: $bp-medium) {
+    padding: 0 2rem 2.5rem 2rem;
+  }
+
+  @media (max-width: $bp-xsmall) {
+    padding: 0 2rem 2.5rem 2rem;
+  }
+}
+
+/* header */
+header {
+  // display: table;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0 1.5rem;
+  position: absolute;
+  z-index: 2;
+
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 78, 152, 0.75);
+
+  @media (max-width: $bp-small) {
+    padding: 0 1rem;
+  }
+}
+
+.logo_box {
+  color: $white;
+  font-weight: bold;
+  // float: left;
+  margin-top: 2px;
+
+  > span,
+  > a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: 1.5rem;
+    vertical-align: middle;
+
+    a {
+      color: $white;
+    }
+
+    img {
+      width: 11rem;
+      margin-bottom: 0.15rem;
+    }
+
+    @media (max-width: $bp-small) {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+span.dot {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100%;
+  background: $white;
+}
+
+.icon-cnalogo {
+  fill: $white;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+
+  @media (max-width: $bp-small) {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.box {
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in;
+  width: 100vw;
+  height: 100vh;
+
+  &.show {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+.bg1 {
+  background-color: #5e69ca;
+}
+.bg2 {
+  background-color: #1a1716;
+  color: #ffffff;
+}
+.bg3 {
+  background-color: blanchedalmond;
+}
+.bg4 {
+  background-color: #004e98;
+  color: #ffffff;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: red;
+  position: relative;
+  left: 0;
+}
+
+.show .circle {
+  animation: circleMove 0.5s 0.3s forwards;
+}
+
+@keyframes circleMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}

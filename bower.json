@@ -1,0 +1,21 @@
+{
+  "name": "f2e_gulp_template",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "milkmidi <milkmidi@medialand.tw>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "device.js": "devicejs#^0.2.7"
+  }
+}
